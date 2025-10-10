@@ -32,6 +32,7 @@ section {
 .nav-logo {
   color: #1E90FF;
   font-family: 'Playfair Display', serif;
+  cursor: pointer;
 }
 .nav-links {
   list-style: none;
@@ -68,7 +69,6 @@ section {
   border: 4px solid white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   object-fit: cover;
-  image-rendering: high-quality;
 }
 .hero-right {
   max-width: 400px;
@@ -114,20 +114,44 @@ section {
   gap: 20px;
 }
 .cert-card {
-  background: #fff;
-  padding: 20px;
+  perspective: 1000px;
   width: 280px;
-  border-radius: 12px;
-  border: 1px solid #cce6ff;
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.1);
-  transition: 0.3s;
+  height: 200px;
 }
-.cert-card:hover {
-  transform: translateY(-6px);
+.cert-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.cert-card:hover .cert-inner {
+  transform: rotateY(180deg);
+}
+.cert-front, .cert-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+}
+.cert-front {
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.1);
+  padding: 20px;
+}
+.cert-back {
+  transform: rotateY(180deg);
+}
+.cert-back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-/* ========== STUDY ABROAD SECTION ========== */
-.study-abroad {
+/* ========== STUDY ABROAD, SUCCESS STORIES, TEST PREP (shared) ========== */
+.study-abroad, .success-stories, .language-programs {
   background: linear-gradient(135deg, #e0f7ff, #f8fcff);
 }
 .carousel-container {
@@ -158,35 +182,34 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(1.05);
   transition: transform 0.5s ease, filter 0.3s ease;
-  image-rendering: high-quality;
 }
 .country-card:hover img {
   transform: scale(1.05);
-  filter: brightness(1.1);
 }
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(30, 144, 255, 0.4);
+  background: rgba(30, 144, 255, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.25s ease-out;
-  will-change: opacity;
+  text-align: center;
+  padding: 10px;
 }
 .country-card:hover .overlay {
   opacity: 1;
 }
 .overlay h4 {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.3;
 }
 
-/* ===== FIXED: CAROUSEL BUTTONS ===== */
+/* ===== CAROUSEL BUTTONS ===== */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -201,17 +224,44 @@ section {
   font-size: 1.4rem;
   z-index: 5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s, transform 0.2s;
 }
 .carousel-btn:hover {
   background: #0a68d6;
-  transform: translateY(-50%) scale(1.1);
 }
-.prev {
-  left: 25px;
+.prev { left: 25px; }
+.next { right: 25px; }
+
+/* ========== TEST PREPARATION (NO ARROWS) ========== */
+.language-programs .carousel-btn {
+  display: none;
 }
-.next {
-  right: 25px;
+.sub-title {
+  color: #1E90FF;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+.lang-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.lang-card {
+  background: #fff;
+  border-radius: 12px;
+  width: 260px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.lang-card:hover { transform: translateY(-6px); }
+.lang-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* ========== OFFICES SECTION ========== */
@@ -268,11 +318,11 @@ section {
 .contact-card {
   background: #fff;
   border: 2px solid #1E90FF;
-  border-radius: 12px;
-  width: 320px;
+  border-radius: 15px;
+  width: 340px;
   margin: 0 auto;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .contact-card a {
   color: #1E90FF;
@@ -292,6 +342,58 @@ section {
 }
 .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* ========== ADD CONTACT BUTTON ========== */
+.add-contact-section {
+  text-align: center;
+  margin: 30px 0;
+}
+.add-contact {
+  background: #1E90FF;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.add-contact:hover {
+  background: #0a68d6;
+}
+
+/* ========== ENQUIRY ========== */
+.enquiry {
+  background: linear-gradient(120deg, #f0f8ff, #ffffff);
+}
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  padding: 10px;
+  border: 1px solid #cce6ff;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.enquiry-form button {
+  background: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.enquiry-form button:hover {
+  background: #0a68d6;
 }
 
 /* ========== FOOTER ========== */
@@ -328,4 +430,3 @@ footer {
     grid-template-rows: repeat(3, 200px);
   }
 }
-
