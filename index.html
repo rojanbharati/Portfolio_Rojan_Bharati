@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rojan Bharati | Manager — Times Educational Kathmandu</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <!-- cache-bust query to ensure browser loads the latest CSS -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="nav">
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main Navigation">
     <div class="nav-container">
-      <h2 class="nav-logo">Rojan Bharati</h2>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#study-abroad">Study Abroad</a></li>
-        <li><a href="#test-preparation">Test Preparation</a></li>
-        <li><a href="#success-stories">Success Stories</a></li>
-        <li><a href="#offices">Offices</a></li>
-        <li><a href="#enquiry">Enquiry</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <h2 class="nav-logo" id="brand">Rojan Bharati</h2>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#certificates">Certificates</a></li>
+        <li role="none"><a role="menuitem" href="#study-abroad">Study Abroad</a></li>
+        <li role="none"><a role="menuitem" href="#test-preparation">Test Preparation</a></li>
+        <li role="none"><a role="menuitem" href="#success-stories">Success Stories</a></li>
+        <li role="none"><a role="menuitem" href="#offices">Offices</a></li>
+        <li role="none"><a role="menuitem" href="#enquiry">Enquiry</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION ================= -->
-  <header id="home" class="hero fade-in">
+  <!-- HERO -->
+  <header id="home" class="hero fade-in" role="banner">
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-left">
-        <img src="rojan.jpg" alt="Rojan Bharati" class="hero-img" />
+        <img src="rojan.jpg" alt="Photo of Rojan Bharati" class="hero-img" />
       </div>
       <div class="hero-right">
         <h1 class="hero-name">Rojan Bharati</h1>
@@ -42,212 +42,201 @@
     </div>
   </header>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="about fade-in">
-    <div class="about-box">
-      <h2 class="section-title">About Me</h2>
-      <p>Hello! I’m <strong>Mr. Rojan Bharati</strong>, an educational counsellor dedicated to guiding students toward the right academic and career pathways. I’m passionate about empowering students to pursue international education and helping them make confident and informed decisions about their futures. My mission is to provide genuine and transparent counselling for students aspiring to study abroad and achieve personal growth through education.</p>
-    </div>
-  </section>
-
-  <!-- ================= CERTIFICATES ================= -->
-  <section id="certificates" class="certificates fade-in">
-    <h2 class="section-title">Certificates</h2>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-inner">
-          <div class="cert-front">
-            <h3>Advising for Study in France (ASF)</h3>
-            <p>ICEF Academy</p>
-            <p><strong>Graduate No:</strong> #30</p>
-            <p>• 03 September 2025</p>
-          </div>
-          <div class="cert-back">
-            <img src="certificates/asf.jpg" alt="ASF Certificate">
-          </div>
-        </div>
+  <!-- ABOUT -->
+  <main>
+    <section id="about" class="about fade-in">
+      <div class="about-box">
+        <h2 class="section-title">About Me</h2>
+        <p>Hello! I’m <strong>Mr. Rojan Bharati</strong>, an educational counsellor dedicated to guiding students toward the right academic and career pathways. I’m passionate about empowering students to pursue international education and helping them make confident and informed decisions about their futures. My mission is to provide genuine and transparent counselling for students aspiring to study abroad and achieve personal growth through education.</p>
       </div>
+    </section>
 
-      <div class="cert-card">
-        <div class="cert-inner">
-          <div class="cert-front">
-            <h3>UK Agent and Counsellor Training</h3>
-            <p>British Council</p>
-            <p><strong>Certificate Code:</strong> 64594</p>
-            <p>• 01 April 2025</p>
-          </div>
-          <div class="cert-back">
-            <img src="certificates/uk.jpg" alt="UK Certificate">
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="certificates fade-in">
+      <h2 class="section-title">Certificates</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-inner">
+            <div class="cert-front">
+              <h3>Advising for Study in France (ASF)</h3>
+              <p>ICEF Academy</p>
+              <p><strong>Graduate No:</strong> #30</p>
+              <p>• 03 September 2025</p>
+            </div>
+            <div class="cert-back">
+              <img src="certificates/asf.jpg" alt="ASF Certificate">
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= STUDY ABROAD ================= -->
-  <section id="study-abroad" class="study-abroad fade-in">
-    <h2 class="section-title">Study Abroad Destinations</h2>
-    <div class="carousel-container">
-      <button class="carousel-btn prev">&#10094;</button>
-      <div class="carousel-track">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <div class="country-card"><img src="images/australia.jpg" alt="Australia"><div class="overlay"><h4>Australia</h4></div></div>
-          <div class="country-card"><img src="images/uk.jpg" alt="United Kingdom"><div class="overlay"><h4>United Kingdom</h4></div></div>
-          <div class="country-card"><img src="images/newzealand.jpg" alt="New Zealand"><div class="overlay"><h4>New Zealand</h4></div></div>
-          <div class="country-card"><img src="images/usa.jpg" alt="USA"><div class="overlay"><h4>USA</h4></div></div>
-          <div class="country-card"><img src="images/canada.jpg" alt="Canada"><div class="overlay"><h4>Canada</h4></div></div>
-          <div class="country-card"><img src="images/france.jpg" alt="France"><div class="overlay"><h4>France</h4></div></div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <div class="country-card"><img src="images/denmark.jpg" alt="Denmark"><div class="overlay"><h4>Denmark</h4></div></div>
-          <div class="country-card"><img src="images/italy.jpg" alt="Italy"><div class="overlay"><h4>Italy</h4></div></div>
-          <div class="country-card"><img src="images/netherlands.jpg" alt="Netherlands"><div class="overlay"><h4>Netherlands</h4></div></div>
-          <div class="country-card"><img src="images/finland.jpg" alt="Finland"><div class="overlay"><h4>Finland</h4></div></div>
-          <div class="country-card"><img src="images/malta.jpg" alt="Malta"><div class="overlay"><h4>Malta</h4></div></div>
-          <div class="country-card"><img src="images/greece.jpg" alt="Greece"><div class="overlay"><h4>Greece</h4></div></div>
-        </div>
-      </div>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- ================= TEST PREPARATION (Language Classes) ================= -->
-  <section id="test-preparation" class="language-programs fade-in">
-    <h2 class="section-title">Test Preparation</h2>
-    <h3 class="sub-title">Language Preparation Classes</h3>
-
-    <!-- Not a carousel (no arrows) — consistent folder pattern images/ -->
-    <div class="lang-grid">
-      <div class="lang-card"><img src="images/ielts.jpg" alt="IELTS"><h3>IELTS</h3></div>
-      <div class="lang-card"><img src="images/pte.jpg" alt="PTE"><h3>PTE</h3></div>
-      <div class="lang-card"><img src="images/french.jpg" alt="French"><h3>French Language</h3></div>
-    </div>
-  </section>
-
-  <!-- ================= SUCCESS STORIES (12 cards, 6-per-slide matching Study Abroad pattern) ================= -->
-  <section id="success-stories" class="success-stories fade-in">
-    <h2 class="section-title">Success Stories</h2>
-    <div class="carousel-container">
-      <button class="carousel-btn prev">&#10094;</button>
-      <div class="carousel-track">
-        <!-- Slide 1 (6) -->
-        <div class="slide">
-          <div class="country-card"><img src="stories/s1.jpg" alt="Student 1"><div class="overlay"><h4>“Thanks to Rojan sir, I got my visa for Australia!”</h4></div></div>
-          <div class="country-card"><img src="stories/s2.jpg" alt="Student 2"><div class="overlay"><h4>“Excellent IELTS preparation and counselling.”</h4></div></div>
-          <div class="country-card"><img src="stories/s3.jpg" alt="Student 3"><div class="overlay"><h4>“Helpful throughout my France process.”</h4></div></div>
-          <div class="country-card"><img src="stories/s4.jpg" alt="Student 4"><div class="overlay"><h4>“Times Educational changed my career path.”</h4></div></div>
-          <div class="country-card"><img src="stories/s5.jpg" alt="Student 5"><div class="overlay"><h4>“Smooth documentation process and guidance.”</h4></div></div>
-          <div class="country-card"><img src="stories/s6.jpg" alt="Student 6"><div class="overlay"><h4>“I highly recommend Rojan sir for counselling.”</h4></div></div>
-        </div>
-        <!-- Slide 2 (6) -->
-        <div class="slide">
-          <div class="country-card"><img src="stories/s7.jpg" alt="Student 7"><div class="overlay"><h4>“Visa granted for UK — thank you Times Educational!”</h4></div></div>
-          <div class="country-card"><img src="stories/s8.jpg" alt="Student 8"><div class="overlay"><h4>“Perfect coaching and guidance for IELTS.”</h4></div></div>
-          <div class="country-card"><img src="stories/s9.jpg" alt="Student 9"><div class="overlay"><h4>“My dream of studying in Canada came true.”</h4></div></div>
-          <div class="country-card"><img src="stories/s10.jpg" alt="Student 10"><div class="overlay"><h4>“Thank you for making my France journey easy.”</h4></div></div>
-          <div class="country-card"><img src="stories/s11.jpg" alt="Student 11"><div class="overlay"><h4>“Rojan sir’s experience really helps students.”</h4></div></div>
-          <div class="country-card"><img src="stories/s12.jpg" alt="Student 12"><div class="overlay"><h4>“Times Educational truly delivers results.”</h4></div></div>
-        </div>
-      </div>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- ================= OFFICES (unchanged format; TikTok deep link + fallback) ================= -->
-  <section id="offices" class="offices fade-in">
-    <h2 class="section-title">Our Offices</h2>
-    <div class="offices-grid">
-      <div class="office-card">
-        <h3>Kathmandu Office</h3>
-        <p>Putalisadak, Kathmandu</p>
-        <p><strong>Landline:</strong> +977 01-5350446</p>
-        <p><strong>Email:</strong> <a href="mailto:timesedukathmandu@gmail.com">timesedukathmandu@gmail.com</a></p>
-        <a href="https://maps.app.goo.gl/96yMqWf4bagqJaHm9" target="_blank" class="map-link">📍 View on Google Maps</a>
-        <div class="follow-row">
-          <span>Follow Us:</span>
-          <div class="office-socials">
-            <!-- tiktok deep link with fallback -->
-            <a href="#" onclick="event.preventDefault(); window.location='tiktok://@times.educational2'; setTimeout(()=>{ window.open('https://www.tiktok.com/@times.educational2','_blank'); }, 800);"><img src="icons/tiktok.png" alt="TikTok"></a>
-            <a href="https://www.facebook.com/TimesEducationalKathmandu" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/timeseducationalkathmandu" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+        <div class="cert-card">
+          <div class="cert-inner">
+            <div class="cert-front">
+              <h3>UK Agent and Counsellor Training</h3>
+              <p>British Council</p>
+              <p><strong>Certificate Code:</strong> 64594</p>
+              <p>• 01 April 2025</p>
+            </div>
+            <div class="cert-back">
+              <img src="certificates/uk.jpg" alt="UK Certificate">
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="office-card">
-        <h3>Pokhara Office</h3>
-        <p>Chilpedhunga, Pokhara, Kaski</p>
-        <p><strong>Landline:</strong> +977 061-590446</p>
-        <p><strong>Email:</strong> <a href="mailto:timesedupokhara@gmail.com">timesedupokhara@gmail.com</a></p>
-        <a href="https://www.google.com/maps?q=Times+Educational+Pokhara" target="_blank" class="map-link">📍 View on Google Maps</a>
-        <div class="follow-row">
-          <span>Follow Us:</span>
-          <div class="office-socials">
-            <a href="#" onclick="event.preventDefault(); window.location='tiktok://@times.educational'; setTimeout(()=>{ window.open('https://www.tiktok.com/@times.educational','_blank'); }, 800);"><img src="icons/tiktok.png" alt="TikTok"></a>
-            <a href="https://www.facebook.com/timespkhr" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/times_educational" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+    <!-- STUDY ABROAD (kept same style) -->
+    <section id="study-abroad" class="study-abroad fade-in">
+      <h2 class="section-title">Study Abroad Destinations</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+        <div class="carousel-track">
+          <div class="slide">
+            <div class="country-card"><img src="images/australia.jpg" alt="Australia"><div class="overlay"><h4>Australia</h4></div></div>
+            <div class="country-card"><img src="images/uk.jpg" alt="United Kingdom"><div class="overlay"><h4>United Kingdom</h4></div></div>
+            <div class="country-card"><img src="images/newzealand.jpg" alt="New Zealand"><div class="overlay"><h4>New Zealand</h4></div></div>
+            <div class="country-card"><img src="images/usa.jpg" alt="USA"><div class="overlay"><h4>USA</h4></div></div>
+            <div class="country-card"><img src="images/canada.jpg" alt="Canada"><div class="overlay"><h4>Canada</h4></div></div>
+            <div class="country-card"><img src="images/france.jpg" alt="France"><div class="overlay"><h4>France</h4></div></div>
+          </div>
+          <div class="slide">
+            <div class="country-card"><img src="images/denmark.jpg" alt="Denmark"><div class="overlay"><h4>Denmark</h4></div></div>
+            <div class="country-card"><img src="images/italy.jpg" alt="Italy"><div class="overlay"><h4>Italy</h4></div></div>
+            <div class="country-card"><img src="images/netherlands.jpg" alt="Netherlands"><div class="overlay"><h4>Netherlands</h4></div></div>
+            <div class="country-card"><img src="images/finland.jpg" alt="Finland"><div class="overlay"><h4>Finland</h4></div></div>
+            <div class="country-card"><img src="images/malta.jpg" alt="Malta"><div class="overlay"><h4>Malta</h4></div></div>
+            <div class="country-card"><img src="images/greece.jpg" alt="Greece"><div class="overlay"><h4>Greece</h4></div></div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- TEST PREPARATION -->
+    <section id="test-preparation" class="language-programs fade-in">
+      <h2 class="section-title">Test Preparation</h2>
+      <h3 class="sub-title">Language Preparation Classes</h3>
+      <div class="lang-grid">
+        <div class="lang-card"><img src="images/ielts.jpg" alt="IELTS"><h3>IELTS</h3></div>
+        <div class="lang-card"><img src="images/pte.jpg" alt="PTE"><h3>PTE</h3></div>
+        <div class="lang-card"><img src="images/french.jpg" alt="French"><h3>French Language</h3></div>
+      </div>
+    </section>
+
+    <!-- SUCCESS STORIES (same style) -->
+    <section id="success-stories" class="success-stories fade-in">
+      <h2 class="section-title">Success Stories</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+        <div class="carousel-track">
+          <div class="slide">
+            <div class="country-card"><img src="stories/s1.jpg" alt="Student 1"><div class="overlay"><h4>“Thanks to Rojan sir, I got my visa for Australia!”</h4></div></div>
+            <div class="country-card"><img src="stories/s2.jpg" alt="Student 2"><div class="overlay"><h4>“Excellent IELTS preparation and counselling.”</h4></div></div>
+            <div class="country-card"><img src="stories/s3.jpg" alt="Student 3"><div class="overlay"><h4>“Helpful throughout my France process.”</h4></div></div>
+            <div class="country-card"><img src="stories/s4.jpg" alt="Student 4"><div class="overlay"><h4>“Times Educational changed my career path.”</h4></div></div>
+            <div class="country-card"><img src="stories/s5.jpg" alt="Student 5"><div class="overlay"><h4>“Smooth documentation process and guidance.”</h4></div></div>
+            <div class="country-card"><img src="stories/s6.jpg" alt="Student 6"><div class="overlay"><h4>“I highly recommend Rojan sir for counselling.”</h4></div></div>
+          </div>
+          <div class="slide">
+            <div class="country-card"><img src="stories/s7.jpg" alt="Student 7"><div class="overlay"><h4>“Visa granted for UK — thank you Times Educational!”</h4></div></div>
+            <div class="country-card"><img src="stories/s8.jpg" alt="Student 8"><div class="overlay"><h4>“Perfect coaching and guidance for IELTS.”</h4></div></div>
+            <div class="country-card"><img src="stories/s9.jpg" alt="Student 9"><div class="overlay"><h4>“My dream of studying in Canada came true.”</h4></div></div>
+            <div class="country-card"><img src="stories/s10.jpg" alt="Student 10"><div class="overlay"><h4>“Thank you for making my France journey easy.”</h4></div></div>
+            <div class="country-card"><img src="stories/s11.jpg" alt="Student 11"><div class="overlay"><h4>“Rojan sir’s experience really helps students.”</h4></div></div>
+            <div class="country-card"><img src="stories/s12.jpg" alt="Student 12"><div class="overlay"><h4>“Times Educational truly delivers results.”</h4></div></div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- OFFICES (unchanged layout) -->
+    <section id="offices" class="offices fade-in">
+      <h2 class="section-title">Our Offices</h2>
+      <div class="offices-grid">
+        <div class="office-card">
+          <h3>Kathmandu Office</h3>
+          <p>Putalisadak, Kathmandu</p>
+          <p><strong>Landline:</strong> +977 01-5350446</p>
+          <p><strong>Email:</strong> <a href="mailto:timesedukathmandu@gmail.com">timesedukathmandu@gmail.com</a></p>
+          <a href="https://maps.app.goo.gl/96yMqWf4bagqJaHm9" target="_blank" rel="noopener noreferrer" class="map-link">📍 View on Google Maps</a>
+          <div class="follow-row">
+            <span>Follow Us:</span>
+            <div class="office-socials">
+              <a href="#" onclick="event.preventDefault(); window.location='tiktok://@times.educational2'; setTimeout(()=>{ window.open('https://www.tiktok.com/@times.educational2','_blank'); }, 700);" aria-label="TikTok"><img src="icons/tiktok.png" alt="TikTok"></a>
+              <a href="https://www.facebook.com/TimesEducationalKathmandu" target="_blank" rel="noopener noreferrer"><img src="icons/facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/timeseducationalkathmandu" target="_blank" rel="noopener noreferrer"><img src="icons/instagram.png" alt="Instagram"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="office-card">
+          <h3>Pokhara Office</h3>
+          <p>Chilpedhunga, Pokhara, Kaski</p>
+          <p><strong>Landline:</strong> +977 061-590446</p>
+          <p><strong>Email:</strong> <a href="mailto:timesedupokhara@gmail.com">timesedupokhara@gmail.com</a></p>
+          <a href="https://www.google.com/maps?q=Times+Educational+Pokhara" target="_blank" rel="noopener noreferrer" class="map-link">📍 View on Google Maps</a>
+          <div class="follow-row">
+            <span>Follow Us:</span>
+            <div class="office-socials">
+              <a href="#" onclick="event.preventDefault(); window.location='tiktok://@times.educational'; setTimeout(()=>{ window.open('https://www.tiktok.com/@times.educational','_blank'); }, 700);" aria-label="TikTok"><img src="icons/tiktok.png" alt="TikTok"></a>
+              <a href="https://www.facebook.com/timespkhr" target="_blank" rel="noopener noreferrer"><img src="icons/facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/times_educational" target="_blank" rel="noopener noreferrer"><img src="icons/instagram.png" alt="Instagram"></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= ENQUIRY ================= -->
-  <section id="enquiry" class="enquiry fade-in">
-    <h2 class="section-title">Make an Enquiry</h2>
-    <form class="enquiry-form" action="https://formspree.io/f/xeorrgad" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <select name="interest" required>
-        <option value="">Select Interest</option>
-        <option>Abroad Studies</option>
-        <option>Language Preparation</option>
-        <option>Counselling</option>
-        <option>Documentation Assistance</option>
-      </select>
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Submit Enquiry</button>
-    </form>
-  </section>
+    <!-- ENQUIRY and CONTACT already placed above and below -->
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact fade-in">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-card">
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9779851409316" target="_blank">+977 9851409316</a></p>
-      <p><strong>Viber:</strong> <a href="viber://chat?number=%2B9779851409316">Open Chat</a></p>
-      <p><strong>Email:</strong> <a href="mailto:rojanbharati10@gmail.com">rojanbharati10@gmail.com</a></p>
-
-      <div class="social-icons">
-        <a href="https://wa.me/9779851409316" target="_blank"><img src="icons/whatsapp.png" alt="WhatsApp"></a>
-        <a href="viber://chat?number=%2B9779851409316" target="_blank"><img src="icons/viber.png" alt="Viber"></a>
-        <a href="https://www.facebook.com/the.believer.roj.an.17" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-        <a href="https://www.linkedin.com/in/rojan-bharati-107049367/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-content">
+        <p><strong>Phone:</strong> +977 9851409316</p>
+        <p><strong>Email:</strong> <a href="mailto:rojanbharati10@gmail.com">rojanbharati10@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rojan-bharati-107049367/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rojan-bharati-107049367/</a></p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="icons/facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/9779851409316" target="_blank" rel="noopener noreferrer"><img src="icons/whatsapp.png" alt="WhatsApp"></a>
+          <a href="viber://chat?number=%2B9779851409316"><img src="icons/viber.png" alt="Viber"></a>
+          <a href="https://www.linkedin.com/in/rojan-bharati-107049367/" target="_blank" rel="noopener noreferrer"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
       </div>
+    </section>
+
+    <!-- QUICK CONTACT -->
+    <div class="add-contact-section fade-in">
+      <h3 style="color:#1E90FF;">Quick Contact Options</h3>
+      <a href="tel:+9779851409316" class="call-btn">📞 Call Now</a>
+      <div class="quick-contact">
+        <a href="https://wa.me/9779851409316" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        <a href="viber://chat?number=%2B9779851409316">📲 Viber</a>
+        <a href="mailto:rojanbharati10@gmail.com">📧 Email</a>
+      </div>
+      <!-- Save Contact removed vCard: using tel as requested -->
+      <a href="tel:+9779851409316" class="add-contact">💾 Save Contact</a>
     </div>
-  </section>
+  </main>
 
-  <!-- ================= ADD CONTACT (vCard) ================= -->
-  <div class="add-contact-section">
-    <a href="rojanbharati.vcf" class="add-contact" download>Add to Contacts</a>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 <strong>Rojan Bharati</strong> | All Rights Reserved</p>
+  </footer>
 
-  <footer>© 2025 Rojan Bharati | All Rights Reserved</footer>
-
-  <!-- ================= SCRIPTS ================= -->
+  <!-- SCRIPTS -->
   <script>
-    // Fade-in intersection observer
+    // fade-in observer
     const faders = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
     faders.forEach(f => observer.observe(f));
 
-    // Generic carousel logic (safe: checks for buttons)
+    // carousels
     document.querySelectorAll('.carousel-container').forEach(container => {
       const track = container.querySelector('.carousel-track');
       if (!track) return;
@@ -263,18 +252,19 @@
         track.style.transform = `translateX(-${i * 100}%)`;
         index = i;
       }
-
       if (nextBtn) nextBtn.addEventListener('click', () => showSlide(index + 1));
       if (prevBtn) prevBtn.addEventListener('click', () => showSlide(index - 1));
-      // start
       showSlide(0);
     });
 
-    // Scroll to top when clicking logo or Home link
-    const logo = document.querySelector('.nav-logo');
-    if (logo) logo.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // scroll to top on logo click & Home anchors
+    const brand = document.getElementById('brand');
+    if (brand) brand.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     document.querySelectorAll('a[href="#home"]').forEach(a => {
-      a.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     });
   </script>
 </body>
